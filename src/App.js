@@ -8,6 +8,8 @@ import {
   Navigate,
   useParams,
   useNavigate } from 'react-router-dom';
+  import { App as SendbirdApp } from '@sendbird/uikit-react';
+  import '@sendbird/uikit-react/dist/index.css';
 
 const BlogPosts = {
   'first-blog-post': {
@@ -23,8 +25,14 @@ const BlogPosts = {
 function Home() {
   return (
     <div style={{ padding: 20 }}>
-      <h2>Home View</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
+      <SendbirdApp
+            breakpoint='576px'
+            appId={'50B86C39-FAE2-45EE-9125-DC02B9C36599'}
+            userId={'123'}
+          >
+            {/* <ChannelListPage /> */}
+            {/* <Customzied /> */}
+          </SendbirdApp>
     </div>
   );
 }
